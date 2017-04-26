@@ -1,7 +1,13 @@
 <html>
 <head>
+<link href="CSS.html" rel="stylesheet" type="text/css" />
 <meta content="text/html; charset=ISO-8859-1"
 http-equiv="content-type">
+<ul>
+  <li><a class="active" href="UserMenu.jsp">Return To Menu</a></li>
+</ul>
+<br>
+<br>
 <title>SearchMenu</title>
 </head>
 <body>

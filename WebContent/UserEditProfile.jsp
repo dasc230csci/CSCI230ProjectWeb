@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
+
 body {font-family: Verdana,sans-serif;margin:0}
 .slide {display:none}
 .slideshow-container {
@@ -57,10 +58,21 @@ body {font-family: Verdana,sans-serif;margin:0}
   from {opacity: .2} 
   to {opacity: 1}
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
 </style>
-<title>Edit User Profile</title>
+
 </head>
 <body>
+
+
+
 <div class="slideshow-container">
 
 <div class="slide fade">
