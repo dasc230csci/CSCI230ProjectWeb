@@ -1,5 +1,5 @@
 <%@page language="java" import="UI.*" import = "Entity.*"%>
-<% UserUI uUI = (UserUI)session.getAttribute("UserUI");%>
+<% UserUI uUI = (UserUI)session.getAttribute("userUi");%>
 
 <html><head>
   
@@ -17,25 +17,28 @@
     	<h4 style="text-align: center;"> You have no saved schools! </h4>
     	
 <%} else { %>
-<form action="......." name="ManageSavedSchools">
-  <div style="text-align: center;"> </div>
 <table style="text-align: left; width: 955px; height: 33px;" border="1" cellpadding="2" cellspacing="2">
     <tbody>
     <% for (String u : uUI.viewSavedSchool()) {  %>
       <tr>
-        <td style="vertical-align: top; width: 33%;"><input name="RemoveSchool" value="Remove" type="submit"><br>
+        <td style="vertical-align: top; width: 33%;">
+         <form action="USER/RemoveSavedSchool.jsp" name="RemoveSavedSchools">
+         <input name="RemoveSchool" value="Remove" type="submit"><input name="schoolName"
+			value="<%out.print(u);%>" type="hidden"></form>
+         <br>
         </td>
-        <td style="vertical-align: top; width: 33%;"><%out.print(u); %><br>
+        <td style="vertical-align: top; width: 33%;"><%out.print(u);%><br>
         </td>
-        <td style="vertical-align: top;"><input name="ViewSchool" value="View" type="submit"><br>
+        <td style="vertical-align: top;">
+        <form action="ViewSchool.jsp" name="ViewSavedSchools">
+        <input name="ViewSchool" value="View" type="submit">
+        <input name="schoolName" value="<%out.print(u);%>" type="hidden"></form>
         </td>
       </tr>
-      <br>
       <%} %>
     </tbody>
   </table>
   <br>
-</form>
 <%} %>
 
 </body></html>
