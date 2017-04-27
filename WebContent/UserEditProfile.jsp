@@ -5,6 +5,36 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
+table {
+   border: none;
+  border-collapse: collapse;
+}
+
+
+tr:hover {background-color: #f5f5f5}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: center;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 17px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
 
 body {font-family: Verdana,sans-serif;margin:0}
 .slide {display:none}
@@ -59,42 +89,19 @@ body {font-family: Verdana,sans-serif;margin:0}
   to {opacity: 1}
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
 </style>
 
 </head>
 <body>
-
-
-
-<div class="slideshow-container">
-
-<div class="slide fade">
-  <img src="http://www.collegerank.net/wp-content/uploads/2015/08/best-college-quads-Northwestern-University-.jpg" style="width:100%">
-  <div class="text">Northwestern University</div>
-</div>
-
-<div class="slide fade">
-  <img src="http://www.collegerank.net/wp-content/uploads/2015/08/best-college-quads-Connecticut-College.jpg" style="width:100%">
-  <div class="text">Connecticut College</div>
-</div>
-
-<div class="slide fade">
-  <img src="http://www.collegerank.net/wp-content/uploads/2015/08/university-of-washington-quad.jpg" style="width:100%">
-  <div class="text">Washington University</div>
-</div>
-
-<a class="prev" onclick="nextSlides()">&#10094;</a>
-<a class="next" onclick="prevSlides()">&#10095;</a>
-
-</div>
+<ul>
+  <li><a class="active" href="UserMenu.jsp">Return To Menu</a></li>
+</ul>
 <br>
+<center><h3> Edit User Page</h3></center>
+<br>
+
+
+
 
 <form method="post" action="Edit_action.jsp" name="editInfo">
 <table
@@ -138,6 +145,7 @@ name="Type" value="u"><br>
 </tr>
 </tbody>
 </table>
+
 <span style="font-family: &quot;Sans&quot;;"><br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
@@ -145,6 +153,33 @@ name="Type" value="u"><br>
 <input name="Submit" value="Edit User" type="submit">&nbsp;&nbsp;&nbsp;
 <input name="Reset" value="Reset" type="reset"></span>&nbsp; <br>
 </form>
+
+<br>
+<br>
+<div class="slideshow-container">
+
+<div class="slide fade">
+  <img src="http://www.collegerank.net/wp-content/uploads/2015/08/best-college-quads-Northwestern-University-.jpg" style="width:100%">
+  <div class="text">Northwestern University</div>
+</div>
+
+<div class="slide fade">
+  <img src="http://www.collegerank.net/wp-content/uploads/2015/08/best-college-quads-Connecticut-College.jpg" style="width:100%">
+  <div class="text">Connecticut College</div>
+</div>
+
+<div class="slide fade">
+  <img src="http://www.collegerank.net/wp-content/uploads/2015/08/university-of-washington-quad.jpg" style="width:100%">
+  <div class="text">Washington University</div>
+</div>
+
+<a class="prev" onclick="nextSlides()">&#10094;</a>
+<a class="next" onclick="prevSlides()">&#10095;</a>
+
+</div>
+<br>
+
+
 <script>
 var slideIndex = 1;
 showSlides(slideIndex);
