@@ -18,6 +18,7 @@ body {font-family: Verdana,sans-serif;margin:0; background-color:#444444}
 	margin:auto;
 	box-shadow: 10px 10px 5px #333333;
 }
+
 </style>
 <head>
 <title>Login Form</title>
@@ -43,7 +44,7 @@ else if(error != null && error.equals("-4")){
 <br>
 <div id="logginblock">
 <center>
-<h1 >Login form</h1>
+<h1 >Login Form</h1>
 </center>
 <center>
 <form method="post" action="Login_action.jsp" name="Login"><br>
@@ -75,5 +76,14 @@ name="Log in" type="submit">&nbsp;&nbsp;&nbsp;
 </form>
 </div>
 <br>
+<footer style="color:white; font-size:12px">
+<center>
+<br>
+<img src="http://i.imgur.com/l2IaWyd.png" style="width:250px; height:150px" />
+<br>
+  Choose My College <br>
+  Created by Team DASC
+  </center>
+</footer>
 </body>
 </html>

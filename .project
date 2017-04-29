@@ -3,6 +3,7 @@
 	<name>CSCI230ProjectWeb</name>
 	<comment></comment>
 	<projects>
+		<project>Dan_CMC_Project</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

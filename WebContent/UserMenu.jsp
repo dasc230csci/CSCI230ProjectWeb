@@ -2,6 +2,18 @@
 <% UserUI uUI = (UserUI)session.getAttribute("userUi"); 
 %>
 <html>
+<style>
+body {font-family: Verdana,sans-serif;margin:0; background-color:#444444}
+#banner{
+  width:100%;
+  background-image:url(http://i.imgur.com/TsQQMTp.png);
+  background-size:880px 680px;
+  background-repeat:no-repeat;
+  background-position:60% 46%;
+  height: 99px;
+  background-color: #333333;
+}
+</style>
 <head>
 <link href="CSS.html" rel="stylesheet" type="text/css" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,7 +27,7 @@
 </ul>
 <br>
 <br>
-<div align="center">
+<div align="center" style="color:white">
 Hello User <%out.println(uUI.viewProfile().getUsername()); %> 
 </div>
 <br>
@@ -68,6 +80,14 @@ function showSlides(index) {
   slides[slideIndex-1].style.display = "block";  
 }
 </script>
-
+<footer style="color:white; font-size:12px">
+<center>
+<br>
+<img src="http://i.imgur.com/l2IaWyd.png" style="width:250px; height:150px" />
+<br>
+  Choose My College <br>
+  Created by Team DASC
+  </center>
+</footer>
 </body>
 </html> 
