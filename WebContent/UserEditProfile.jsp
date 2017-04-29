@@ -106,7 +106,7 @@ body {font-family: Verdana,sans-serif;margin:0}
 
 <form method="post" action="Edit_action.jsp" name="editInfo">
 <table
-style="text-align: left; width: 500px; height: 154px; margin-left: auto; margin-right: auto; background-color: #D3D3D3"
+style="background-color:white; border-radius: 5px; text-align: left; width: 500px; height: 154px; margin-left: auto; margin-right: auto; 
 border="1" cellpadding="2" cellspacing="2">
 <tbody>
 <tr>

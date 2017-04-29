@@ -1,4 +1,12 @@
 <html>
+<style>
+body {font-family: Verdana,sans-serif; font-color: white; margin:0; background-color:#444444}
+table {
+   border: none;
+  border-collapse: collapse;
+}
+tr:hover {background-color: #f5f5f5}
+</style>
 <head>
 <link href="CSS.html" rel="stylesheet" type="text/css" />
 <meta content="text/html; charset=ISO-8859-1"
@@ -8,28 +16,12 @@ http-equiv="content-type">
 </ul>
 <br>
 <br>
-<title>SearchMenu</title>
 </head>
 <body>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-&nbsp;&nbsp; &nbsp;&nbsp; <big><big>Search Menu</big></big><br>
+<center><h3 style="color:white"> Search Menu</h3></center>
+
 <form method="get" action="SearchResult.jsp" name="SearchForm">
-<table style="text-align: left; height: 622px; width: 1108px;"
+<table style="text-align: left; background-color: white; height: 622px; width: 1108px;"
 border="1" cellpadding="2" cellspacing="2">
 <tbody>
 <tr>
@@ -42,7 +34,7 @@ name="schoolName"><br>
 <tr>
 <td style="vertical-align: top; width: 350px;">by STATE<br>
 </td>
-<td style="vertical-align: top; width: 740px;">conatins <input
+<td style="vertical-align: top; width: 740px;">contains <input
 name="state"><br>
 </td>
 </tr>
@@ -169,5 +161,14 @@ name="qualOfLifeScaleMin"> and <input name="qualOfLifeScaleMax"><br>
 </form>
 <br>
 <br>
+<footer style="color:white; font-size:12px">
+<center>
+<br>
+<img src="http://i.imgur.com/l2IaWyd.png" style="width:250px; height:150px" />
+<br>
+  Choose My College <br>
+  Created by Team DASC
+  </center>
+</footer>
 </body>
 </html>
