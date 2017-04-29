@@ -3,7 +3,7 @@
 
 <html>
 <style>
-body {font-family: Verdana,sans-serif; font-color: white; margin:0; background-color:#444444}
+body {font-family: Verdana,sans-serif; font-color: white; margin:0; background-color:#686868}
 table {
   border: none;
   border-collapse: collapse;
@@ -28,7 +28,7 @@ tr:hover {background-color: #f5f5f5}
   
 
     <% if (uUI.viewSavedSchool().isEmpty()){ %>
-    	<h4 style="text-align: center;"> You have no saved schools! </h4>
+    	<h4 style="text-align: center; color:white"> You have no saved schools! </h4>
     	
 <%} else { %>
 <table style="text-align: auto; background-color: white; border-radius: 5px; width: 100%; height: 33px;" border="1"; cellpadding="2" cellspacing="2" >
@@ -57,7 +57,7 @@ tr:hover {background-color: #f5f5f5}
 <footer style="color:white; font-size:12px">
 <center>
 <br>
-<img src="http://i.imgur.com/l2IaWyd.png" style="width:250px; height:150px" />
+<img src="http://i.imgur.com/l2IaWyd.png" style="width:250px; height:200px" />
 <br>
   Choose My College <br>
   Created by Team DASC

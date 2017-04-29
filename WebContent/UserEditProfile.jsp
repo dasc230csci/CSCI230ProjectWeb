@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
-body {font-family: Verdana,sans-serif;margin:0; background-color:#444444}
+body {font-family: Verdana,sans-serif;margin:0; background-color:#686868}
 table {
    border: none;
   border-collapse: collapse;
@@ -213,7 +213,7 @@ function showSlides(index) {
 <footer style="color:white; font-size:12px">
 <center>
 <br>
-<img src="http://i.imgur.com/l2IaWyd.png" style="width:250px; height:150px" />
+<img src="http://i.imgur.com/l2IaWyd.png" style="width:250px; height:200px" />
 <br>
   Choose My College <br>
   Created by Team DASC

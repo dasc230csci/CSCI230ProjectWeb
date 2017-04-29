@@ -83,7 +83,7 @@ function showSlides(index) {
 <footer style="color:white; font-size:12px">
 <center>
 <br>
-<img src="http://i.imgur.com/l2IaWyd.png" style="width:250px; height:150px" />
+<img src="http://i.imgur.com/l2IaWyd.png" style="width:250px; height:200px" />
 <br>
   Choose My College <br>
   Created by Team DASC
