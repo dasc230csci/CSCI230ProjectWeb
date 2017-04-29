@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
+body {font-family: Verdana,sans-serif;margin:0; background-color:#444444}
 table {
    border: none;
   border-collapse: collapse;
@@ -97,7 +98,7 @@ body {font-family: Verdana,sans-serif;margin:0}
   <li><a class="active" href="UserMenu.jsp">Return To Menu</a></li>
 </ul>
 <br>
-<center><h3> Edit User Page</h3></center>
+<center><h3 style="color:white"> Edit User Page</h3></center>
 <br>
 
 
@@ -105,7 +106,7 @@ body {font-family: Verdana,sans-serif;margin:0}
 
 <form method="post" action="Edit_action.jsp" name="editInfo">
 <table
-style="text-align: left; width: 500px; height: 154px; margin-left: auto; margin-right: auto;"
+style="text-align: left; width: 500px; height: 154px; margin-left: auto; margin-right: auto; background-color: #D3D3D3"
 border="1" cellpadding="2" cellspacing="2">
 <tbody>
 <tr>
@@ -143,9 +144,12 @@ value=<%out.print(uUI.viewProfile().getPassword());%>><br>
 name="Type" value="u"><br>
 </td>
 </tr>
+<tr>
+</tr>
 </tbody>
 </table>
 
+<center>
 <span style="font-family: &quot;Sans&quot;;"><br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
@@ -153,6 +157,7 @@ name="Type" value="u"><br>
 <input name="Submit" value="Edit User" type="submit">&nbsp;&nbsp;&nbsp;
 <input name="Reset" value="Reset" type="reset"></span>&nbsp; <br>
 </form>
+</center>
 
 <br>
 <br>
@@ -205,5 +210,14 @@ function showSlides(index) {
   slides[slideIndex-1].style.display = "block";  
 }
 </script>
+<footer style="color:white; font-size:12px">
+<center>
+<br>
+<img src="http://i.imgur.com/l2IaWyd.png" style="width:250px; height:150px" />
+<br>
+  Choose My College <br>
+  Created by Team DASC
+  </center>
+</footer>
 </body>
 </html>

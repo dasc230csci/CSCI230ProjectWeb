@@ -1,7 +1,16 @@
 <%@page language="java" import="UI.*" import = "Entity.*"%>
 <% UserUI uUI = (UserUI)session.getAttribute("userUi");%>
 
-<html><head>
+<html>
+<style>
+body {font-family: Verdana,sans-serif; font-color: white; margin:0; background-color:#444444}
+table {
+   border: none;
+  border-collapse: collapse;
+}
+tr:hover {background-color: #f5f5f5}
+</style>
+<head>
   <link href="CSS.html" rel="stylesheet" type="text/css" />
   <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
   <title>ManageSavedSchools</title>
@@ -13,7 +22,7 @@
 </ul>
 <br>
 <br>
-<h2 style="text-align: center;"> Manage Saved Schools </h2>
+<h2 style="text-align: center; color: white"> Manage Saved Schools </h2>
 
 
   
@@ -22,7 +31,7 @@
     	<h4 style="text-align: center;"> You have no saved schools! </h4>
     	
 <%} else { %>
-<table style="text-align: left; width: 955px; height: 33px;" border="1" cellpadding="2" cellspacing="2">
+<table style="text-align: left; background-color: #D3D3D3; width: 840px; height: 33px;" border="1"; cellpadding="2" cellspacing="2" >
     <tbody>
     <% for (String u : uUI.viewSavedSchool()) {  %>
       <tr>
@@ -45,5 +54,14 @@
   </table>
   <br>
 <%} %>
-
-</body></html>
+<footer style="color:white; font-size:12px">
+<center>
+<br>
+<img src="http://i.imgur.com/l2IaWyd.png" style="width:250px; height:150px" />
+<br>
+  Choose My College <br>
+  Created by Team DASC
+  </center>
+</footer>
+</body>
+</html>
