@@ -1,7 +1,8 @@
 <%@page language="java" import="UI.*" import = "Entity.*"%>
+<%@include file="userVerifyLogin.jsp"%>
 <% UserUI uUI = (UserUI)session.getAttribute("userUi");
 	String error= request.getParameter("Error");
-	if(error != null && error.equals("-1")){
+	if(error != null && error.equals("1")){
 		out.println("please input value in the required fields");
 	}
 %>
@@ -10,6 +11,38 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
+body {font-family: Verdana,sans-serif;margin:0; background-color:#686868}
+table {
+   border: none;
+  border-collapse: collapse;
+}
+
+
+tr:hover {background-color: #f5f5f5}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: center;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 17px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
 body {font-family: Verdana,sans-serif;margin:0}
 .slide {display:none}
 .slideshow-container {
@@ -62,10 +95,78 @@ body {font-family: Verdana,sans-serif;margin:0}
   from {opacity: .2} 
   to {opacity: 1}
 }
+
 </style>
-<title>Edit User Profile</title>
+
 </head>
 <body>
+<ul>
+  <li><a class="active" href="UserMenu.jsp">Return To Menu</a></li>
+</ul>
+<br>
+<center><h3 style="color:white"> Edit User Page</h3></center>
+<br>
+
+
+
+
+<form method="post" action="UserEditProfile_action.jsp" name="editInfo">
+<table
+style="background-color:white; border-radius: 5px; text-align: left; width: 400px; height: 154px; margin-left: auto; margin-right: auto; 
+border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="vertical-align: top; width: 300px;">First Name<br>
+</td>
+<td style="vertical-align: top;"><input name="FirstName"
+value=<%out.print(uUI.viewProfile().getFirstName());%> ><br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Last Name<br>
+</td>
+<td style="vertical-align: top;"><input name="LastName"
+value=<%out.print(uUI.viewProfile().getLastName());%>><br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Username<br>
+</td>
+<td style="vertical-align: top;"><input disabled="disabled"
+name="Username" value=<%out.print(uUI.viewProfile().getUsername());%>><br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Password<br>
+</td>
+<td style="vertical-align: top;"><input name="Password"
+value=<%out.print(uUI.viewProfile().getPassword());%>><br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Type<br>
+</td>
+<td style="vertical-align: top;"><input disabled="disabled"
+name="Type" value="u"><br>
+</td>
+</tr>
+<tr>
+</tr>
+</tbody>
+</table>
+
+<center>
+<span style="font-family: &quot;Sans&quot;;"><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="Submit" value="Edit User" type="submit">&nbsp;&nbsp;&nbsp;
+<input name="Reset" value="Reset" type="reset"></span>&nbsp; <br>
+</form>
+</center>
+
+<br>
+<br>
 <div class="slideshow-container">
 
 <div class="slide fade">
@@ -89,55 +190,7 @@ body {font-family: Verdana,sans-serif;margin:0}
 </div>
 <br>
 
-<form method="post" action="Edit_action.jsp" name="editInfo">
-<table
-style="text-align: left; width: 1318px; height: 154px; margin-left: auto; margin-right: auto;"
-border="1" cellpadding="2" cellspacing="2">
-<tbody>
-<tr>
-<td style="vertical-align: top; width: 1000px;">First Name<br>
-</td>
-<td style="vertical-align: top;"><input name="FirstName"
-value=<%out.print(uUI.viewProfile().getFirstName());%> ><br>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">Last Name<br>
-</td>
-<td style="vertical-align: top;"><input name="LastName"
-value=<%out.print(uUI.viewProfile().getLastName());%>><br>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">Username<br>
-</td>
-<td style="vertical-align: top;"><input disabled="disabled"
-name="Username" value=<%out.print(uUI.getUsername());%>><br>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">Password<br>
-</td>
-<td style="vertical-align: top;"><input name="Password"
-value=<%out.print(uUI.viewProfile().getPassword());%>><br>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">Type<br>
-</td>
-<td style="vertical-align: top;"><input disabled="disabled"
-name="Type" value="u"><br>
-</td>
-</tr>
-</tbody>
-</table>
-<span style="font-family: &quot;Sans&quot;;"><br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input name="Submit" value="Edit User" type="submit">&nbsp;&nbsp;&nbsp;
-<input name="Reset" value="Reset" type="reset"></span>&nbsp; <br>
-</form>
+
 <script>
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -163,5 +216,14 @@ function showSlides(index) {
   slides[slideIndex-1].style.display = "block";  
 }
 </script>
+<footer style="color:white; font-size:12px">
+<center>
+<br>
+<img src="http://i.imgur.com/l2IaWyd.png" style="width:250px; height:200px" />
+<br>
+  Choose My College <br>
+  Created by Team DASC
+  </center>
+</footer>
 </body>
 </html>

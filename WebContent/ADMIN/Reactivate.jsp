@@ -3,7 +3,7 @@
 <%
 AdminUI adminUi = (AdminUI)session.getAttribute("adminUi");
 String username = request.getParameter("Username");
-if(adminUi.deactivateUser(username)){
+if(adminUi.reactivateAccount(username)){
 	response.sendRedirect("ManageUserMenu.jsp");
 }
 else{

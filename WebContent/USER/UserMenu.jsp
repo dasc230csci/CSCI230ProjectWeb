@@ -6,7 +6,8 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {font-family: Verdana,sans-serif;margin:0}
+body {font-family: Verdana,sans-serif; font-color: white; margin:0; background-color:#686868}
+
 .slide {display:none}
 .slideshow-container {
   max-width: 640px;
@@ -89,9 +90,14 @@ li a:hover {
   <li><a class="active" href="SearchMenu.jsp">Search for Schools</a></li>
   <li><a class ="active" href="ManageSavedSchool.jsp">Manage My Saved Schools</a></li>
   <li><a class ="active" href ="UserEditProfile.jsp">Manage My Profile</a></li>
+  <li><a class ="active" href ="UserLogOut.jsp">LogOut</a></li>
 </ul>
 <br>
-Hello User <%out.println(uUI.getUsername());%>
+<div align="center" style="color:white">
+Hello User <%out.println(uUI.viewProfile().getUsername()); %> 
+</div>
+<br>
+<br>
 <div class="slideshow-container">
 
 <div class="slide fade">
@@ -140,6 +146,14 @@ function showSlides(index) {
   slides[slideIndex-1].style.display = "block";  
 }
 </script>
-
+<footer style="color:white; font-size:12px">
+<center>
+<br>
+<img src="http://i.imgur.com/l2IaWyd.png" style="width:250px; height:200px" />
+<br>
+  Choose My College <br>
+  Created by Team DASC
+  </center>
+</footer>
 </body>
 </html> 

@@ -18,11 +18,9 @@ body {font-family: Verdana,sans-serif;margin:0; background-color:#444444}
 	margin:auto;
 	box-shadow: 10px 10px 5px #333333;
 }
-
 </style>
 <head>
 <title>Login Form</title>
-
 </head>
 <body>
 <div id="banner">
@@ -44,17 +42,17 @@ else if(error != null && error.equals("2")){
 	out.println("Username or Password is invalid");
 }
 else if(error != null && error.equals("3")){
-	out.println("Error with accessing database");
+	out.println("Deactivated User");
 }
-else if(error != null && error.equals("-4")){
-	out.println("Must be logged in to access.");
+else if(error != null && error.equals("4")){
+	out.println("Please Login to use website");
 }
 %>
 </b>
 </h4>
 <form method="post" action="Login_action.jsp" name="Login"><br>
-<table style="text-align: left; width: 200px; height: 150px;"
-border="0">
+<table style="background-color:white; border-radius: 5px; text-align: center; width: 300px; height: 154px; margin-left: auto; margin-right: auto; 
+border="1" cellpadding="2" cellspacing="2">
 <tbody>
 <tr>
 <td style="vertical-align: top;">Username<br>

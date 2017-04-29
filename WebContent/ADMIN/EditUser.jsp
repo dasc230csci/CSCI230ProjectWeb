@@ -1,52 +1,100 @@
-<html>
-<head>
-
-<title>Edit User Form</title>
-</head>
-<body>
-<br>
-Edit User form:<br>
-<br>
-
+<%@ page language="java" import="Controller.*, java.util.*, UI.*, Entity.*"%>
+<%@include file="adminVerifyLogin.jsp"%>
 <%
-    out.println("Edit user : " + request.getParameter("Username"));
+AdminUI adminUi = (AdminUI)session.getAttribute("adminUi");
+String username = request.getParameter("Username");
+Account account = adminUi.viewOthersProfile(username);
 %>
-<form method="post" action="Edit_action.jsp" name="editUser"><br>
-<table style="text-align: left; width: 266px; height: 228px;"
-border="1" >
+<html>
+<style>
+body {font-family: Verdana,sans-serif; font-color: white; margin:0; background-color:#686868}
+table {
+   border: none;
+  border-collapse: collapse;
+}
+tr:hover {background-color: #f5f5f5}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li {
+    float: center;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 17px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #111;
+}
+</style>
+<head>
+<link href="CSS.html" rel="stylesheet" type="text/css" />
+<meta content="text/html; charset=ISO-8859-1"
+http-equiv="content-type">
+<ul>
+  <li><a class="active" href="AdminMenu.jsp">Return To Menu</a></li>
+</ul>
+<br>
+<br>
+</head>
+<%
+	String error = request.getParameter("Error");
+	if(error != null && error.equals("-1")){
+		out.println("Please input value in the required fields");
+}
+	if(error != null && error.equals("-2")){
+		out.println("Invalid type, please input a(admin) or u(user)");
+}
+	if(error != null && error.equals("-3")){
+		out.println("Invalid status, please input Y(active) or N(inactive)");
+}
+	if(error != null && error.equals("-4")){
+		out.println("Add user failed, please try again");
+}
+%>
+<form method="post" action="EditUser_action.jsp" name="editUser"><br>
+<table style="background-color:white; border-radius: 5px; text-align: left; width: 500px; height: 154px; margin-left: auto; margin-right: auto; 
+border="1" cellpadding="2" cellspacing="2">
 <tbody>
 <tr>
 <td style="vertical-align: top;">First Name<br>
 </td>
-<td style="vertical-align: top;"><input name="FirstName" value="???"><br>
+<td style="vertical-align: top;"><input name="FirstName" value="<%out.print(account.getFirstName()); %>"><br>
 </td>
 </tr>
 <tr>
 <tr>
 <td style="vertical-align: top;">Last Name<br>
 </td>
-<td style="vertical-align: top;"><input name="LastName" value="???"><br>
+<td style="vertical-align: top;"><input name="LastName" value="<%out.print(account.getLastName()); %>"><br>
 </td>
 </tr>
 <tr>
 <td style="vertical-align: top;">Username<br>
 </td>
-<td style="vertical-align: top;"><input name="Username" value="???" readonly> </td>
+<td style="vertical-align: top;"><input name="Username" value="<%out.print(account.getUsername()); %>" readonly> </td>
 </tr>
 <tr>
 <td style="vertical-align: top;">Password<br>
 </td>
-<td style="vertical-align: top;"><input name="Password" value="???"> </td>
+<td style="vertical-align: top;"><input name="Password" value="<%out.print(account.getPassword()); %>"> </td>
 </tr>
 <tr>
 <td style="vertical-align: top;">Type<br>
 </td>
-<td style="vertical-align: top;"><input name="Type" value="???"> </td>
+<td style="vertical-align: top;"><input name="Type" value="<%out.print(account.getType()); %>"> </td>
 </tr>
 <tr>
 <td style="vertical-align: top;">Status<br>
 </td>
-<td style="vertical-align: top;"><input name="Status" value="???"> </td>
+<td style="vertical-align: top;"><input name="Status" value="<%out.print(account.getStatus()); %>"> </td>
 </tr>
 
 <tr>
@@ -60,6 +108,14 @@ name="Reset" type="reset"></td>
 <br>
 </form>
 <br>
+<footer style="color:white; font-size:12px">
+<center>
+<br>
+<img src="http://i.imgur.com/l2IaWyd.png" style="width:250px; height:200px" />
+<br>
+  Choose My College <br>
+  Created by Team DASC
+  </center>
+</footer>
 </body>
 </html>
-
