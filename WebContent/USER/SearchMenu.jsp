@@ -3,22 +3,36 @@
 <html>
 <style>
 body {font-family: Verdana,sans-serif; font-color: white; margin:0; background-color:#686868}
+#banner{
+  width:100%;
+  background-image:url(http://i.imgur.com/TsQQMTp.png);
+  background-size:880px 680px;
+  background-repeat:no-repeat;
+  background-position:60% 46%;
+  height: 99px;
+  background-color: #333333;
+}
 table {
    border: none;
   border-collapse: collapse;
 }
-tr:hover {background-color: #f5f5f5}
+tr:nth-child(even) {background-color: #f2f2f2}
+tr:hover {background-color: #dddddd}
 ul {
+	width: 100%;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
+ 
 }
 li {
     float: center;
+   
 }
 li a {
+   
     display: block;
     color: white;
     text-align: center;
@@ -33,6 +47,8 @@ li a:hover {
 <link href="CSS.html" rel="stylesheet" type="text/css" />
 <meta content="text/html; charset=ISO-8859-1"
 http-equiv="content-type">
+<div id="banner">
+</div>
 <ul>
   <li><a class="active" href="UserMenu.jsp">Return To Menu</a></li>
 </ul>
@@ -43,7 +59,7 @@ http-equiv="content-type">
 <center><h3 style="color:white"> Search Menu</h3></center>
 
 <form method="get" action="SearchResult.jsp" name="SearchForm">
-<table style="text-align: left; background-color: white; height: 622px; width: 1108px;"
+<table style="text-align: left; background-color: white; height: 622px; width: 100%;"
 border="1" cellpadding="2" cellspacing="2">
 <tbody>
 <tr>

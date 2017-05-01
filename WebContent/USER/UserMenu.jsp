@@ -7,7 +7,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {font-family: Verdana,sans-serif; font-color: white; margin:0; background-color:#686868}
-
+#banner{
+  width:100%;
+  background-image:url(http://i.imgur.com/TsQQMTp.png);
+  background-size:880px 680px;
+  background-repeat:no-repeat;
+  background-position:60% 46%;
+  height: 99px;
+  background-color: #333333;
+}
 .slide {display:none}
 .slideshow-container {
   max-width: 640px;
@@ -86,6 +94,8 @@ li a:hover {
 </style>
 </head>
 <body>
+<div id="banner">
+</div>
 <ul>
   <li><a class="active" href="SearchMenu.jsp">Search for Schools</a></li>
   <li><a class ="active" href="ManageSavedSchool.jsp">Manage My Saved Schools</a></li>

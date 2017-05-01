@@ -1,22 +1,17 @@
 <%@page language="java" import="UI.*" import = "Entity.*"%>
 <%@include file="userVerifyLogin.jsp"%>
-<% UserUI uUI = (UserUI)session.getAttribute("userUi");
-	String error= request.getParameter("Error");
-	if(error != null && error.equals("1")){
-		out.println("please input value in the required fields");
-	}
-%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
 body {font-family: Verdana,sans-serif;margin:0; background-color:#686868}
 table {
    border: none;
   border-collapse: collapse;
+  box-shadow: 5px 5px 5px #333333;
 }
-
 
 tr:hover {background-color: #f5f5f5}
 ul {
@@ -106,13 +101,22 @@ body {font-family: Verdana,sans-serif;margin:0}
 <br>
 <center><h3 style="color:white"> Edit User Page</h3></center>
 <br>
+<h4 style="color:white">
+<% UserUI uUI = (UserUI)session.getAttribute("userUi");
+	String error= request.getParameter("Error");
+	if(error != null && error.equals("1")){
+		out.println("please input value in the required fields");
+	}
+	if(error != null && error.equals("2")){
+		out.println("Cannot start with space please input value in the required fields");
+	}
+%>
 
-
-
+</h4>
 
 <form method="post" action="UserEditProfile_action.jsp" name="editInfo">
 <table
-style="background-color:white; border-radius: 5px; text-align: left; width: 400px; height: 154px; margin-left: auto; margin-right: auto; 
+style="background-color:white; border-radius: 5px; text-align: left; width: 300px; height: 154px; margin-left: auto; margin-right: auto; 
 border="1" cellpadding="2" cellspacing="2">
 <tbody>
 <tr>
@@ -156,12 +160,11 @@ name="Type" value="u"><br>
 </table>
 
 <center>
-<span style="font-family: &quot;Sans&quot;;"><br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input name="Submit" value="Edit User" type="submit">&nbsp;&nbsp;&nbsp;
-<input name="Reset" value="Reset" type="reset"></span>&nbsp; <br>
+<span style="position:relative;"><br>
+
+<input name="Submit" value="Edit User" type="submit">
+<input name="Reset" value="Reset" type="reset">
+</span> <br>
 </form>
 </center>
 

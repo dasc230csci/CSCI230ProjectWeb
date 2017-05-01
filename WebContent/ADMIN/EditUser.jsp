@@ -8,9 +8,19 @@ Account account = adminUi.viewOthersProfile(username);
 <html>
 <style>
 body {font-family: Verdana,sans-serif; font-color: white; margin:0; background-color:#686868}
+#banner{
+  width:100%;
+  background-image:url(http://i.imgur.com/TsQQMTp.png);
+  background-size:880px 680px;
+  background-repeat:no-repeat;
+  background-position:60% 46%;
+  height: 99px;
+  background-color: #333333;
+}
 table {
    border: none;
   border-collapse: collapse;
+   box-shadow: 5px 5px 5px #333333;
 }
 tr:hover {background-color: #f5f5f5}
 ul {
@@ -38,12 +48,15 @@ li a:hover {
 <link href="CSS.html" rel="stylesheet" type="text/css" />
 <meta content="text/html; charset=ISO-8859-1"
 http-equiv="content-type">
+<div id="banner">
+</div>
 <ul>
   <li><a class="active" href="AdminMenu.jsp">Return To Menu</a></li>
 </ul>
 <br>
 <br>
 </head>
+<h3 style="color:white">
 <%
 	String error = request.getParameter("Error");
 	if(error != null && error.equals("-1")){
@@ -56,9 +69,13 @@ http-equiv="content-type">
 		out.println("Invalid status, please input Y(active) or N(inactive)");
 }
 	if(error != null && error.equals("-4")){
-		out.println("Add user failed, please try again");
+		out.println("Edit user failed, please try again");
+}
+	if(error != null && error.equals("1")){
+		out.println("Edit user failed, please try again");
 }
 %>
+</h3>
 <form method="post" action="EditUser_action.jsp" name="editUser"><br>
 <table style="background-color:white; border-radius: 5px; text-align: left; width: 500px; height: 154px; margin-left: auto; margin-right: auto; 
 border="1" cellpadding="2" cellspacing="2">

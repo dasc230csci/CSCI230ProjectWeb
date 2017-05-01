@@ -4,10 +4,20 @@
 <html>
 <style>
 body {font-family: Verdana,sans-serif; font-color: white; margin:0; background-color:#686868}
+#banner{
+  width:100%;
+  background-image:url(http://i.imgur.com/TsQQMTp.png);
+  background-size:880px 680px;
+  background-repeat:no-repeat;
+  background-position:60% 46%;
+  height: 99px;
+  background-color: #333333;
+}
 table {
    border: none;
   border-collapse: collapse;
 }
+tr:nth-child(even) {background-color: #f2f2f2}
 tr:hover {background-color: #f5f5f5}
 ul {
     list-style-type: none;
@@ -34,6 +44,8 @@ li a:hover {
 <link href="CSS.html" rel="stylesheet" type="text/css" />
 <meta content="text/html; charset=ISO-8859-1"
 http-equiv="content-type">
+<div id="banner">
+</div>
 <ul>
   <li><a class="active" href="AdminMenu.jsp">Return To Menu</a></li>
 </ul>
@@ -58,7 +70,7 @@ http-equiv="content-type">
     }
 %>
 <form method="post" action="EditUniversity_action.jsp" name="EditUniversity">
-<table style="text-align: left; background-color: white; height: 541px; width: 959px;" border="1"
+<table style="text-align: left; background-color: white; height: 541px; width: 100%;" border="1"
 cellpadding="2" cellspacing="2">
 <tbody>
 <tr>

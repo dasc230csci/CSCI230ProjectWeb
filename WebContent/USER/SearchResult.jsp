@@ -49,7 +49,8 @@ table {
    border: none;
   border-collapse: collapse;
 }
-tr:hover {background-color: #f5f5f5}
+tr:nth-child(even) {background-color: #f2f2f2}
+tr:hover {background-color: #dddddd}
 ul {
     list-style-type: none;
     margin: 0;

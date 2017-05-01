@@ -8,6 +8,15 @@ String userName = request.getParameter("Username");
 String password = request.getParameter("Password");
 String type = request.getParameter("Type");
 String status = request.getParameter("Status");
+if(firstName.equals("")||lastName.equals("")||password.equals("")||type.equals("")||status.equals("")){
+	response.sendRedirect("EditUser.jsp?Error=1&Username="+userName);
+	return;
+}
+else if(firstName.charAt(0) == ' '||lastName.charAt(0) == ' '||password.charAt(0) == ' '||type.charAt(0) == ' '||status.charAt(0) == ' '){
+	response.sendRedirect("EditUser.jsp?Error=1&Username="+userName);
+	return;
+}
+
 int verifyUEdit= adminUi.editUserProfile(firstName, lastName, userName, password, type, status);
 if(verifyUEdit == 0){
 	response.sendRedirect("ManageUserMenu.jsp");

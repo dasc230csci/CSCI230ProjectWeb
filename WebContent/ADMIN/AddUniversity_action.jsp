@@ -63,7 +63,11 @@
 	}
 	schoolInfo.addAll(emphases);
 	
-	if(adminUi.addUniversity(schoolInfo)){
+	if(schoolName.equals("")||schoolName.charAt(0) == ' '){
+		response.sendRedirect("AddUniversity.jsp?Error=1");
+	}
+	
+	else if(adminUi.addUniversity(schoolInfo)){
 		response.sendRedirect("ManageUniversityMenu.jsp");
 	}
 	else{
